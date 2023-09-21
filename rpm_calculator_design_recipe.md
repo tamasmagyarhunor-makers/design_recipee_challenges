@@ -146,7 +146,7 @@ def test_given_300_word_string_returns_1_minute():
     actual = calculate_rpm(string_with_300_words)
     expected = "2 minutes"
 
-    assert == actual == expected
+    assert actual == expected
 
 """
 Given an empty string
