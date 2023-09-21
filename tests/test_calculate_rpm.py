@@ -46,3 +46,13 @@ def test_given_300_word_string_returns_1_minute():
     expected = "2 minutes"
 
     assert actual == expected
+
+"""
+Given an empty string
+It returns "0 minutes"
+"""
+def test_given_empty_string_returns_0_minutes():
+    actual = calculate_rpm("")
+    expected = "0 minutes"
+
+    assert actual == expected

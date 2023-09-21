@@ -2,6 +2,8 @@ import math
 
 def calculate_rpm(string):
     WORD_PER_MINUTE = 200
+    if len(string) < 1:
+        return "0 minutes"
 
     # 1. divide number of words with 200 to see how many minutes it will take => might return float
     # 2. since it can return float, we have to use math.ceil so eg. 1.2 becomes 2
