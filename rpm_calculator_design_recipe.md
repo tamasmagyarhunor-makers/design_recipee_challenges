@@ -150,11 +150,13 @@ def test_given_300_word_string_returns_1_minute():
 
 """
 Given an empty string
-It returns "0 minutes"
+It raises an Error("Can't estimate reading time for empty text")
 """
 def test_given_empty_string_returns_0_minutes():
-    actual = calculate_rpm("")
-    expected = "0 minutes"
+    with pytest.raises(Exception) as e:
+        calculate_rpm("")
+    actual = str(e.value)
+    expected = "Can't estimate reading time for empty text"
 
 assert actual == expected
 ```
